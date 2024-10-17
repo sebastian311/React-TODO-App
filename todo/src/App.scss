@@ -6,6 +6,7 @@
   background-color: whitesmoke;
 
   height: 100vh;
+  max-height: 100vh;
 
   div {
     width: 40%;
@@ -13,11 +14,11 @@
     border-radius: 15% 0 15% 0;
   }
 
-  div:nth-child(2n+1) {
+  div:nth-child(2n + 1) {
     background-color: rgb(241, 238, 190);
   }
 
-  div:nth-child(2n+1):not(:first-child) {
+  div:nth-child(2n + 1):not(:first-child) {
     background-color: rgba(241, 238, 190);
     margin-top: -19px;
     padding-top: 20px;
@@ -33,5 +34,10 @@
     font-family: "Cedarville Cursive", cursive;
     font-weight: 400;
     font-style: normal;
+  }
+
+  .Input-Container {
+    background-color: rgb(59, 130, 211) !important;
+    color: white;
   }
 }

@@ -1,6 +1,11 @@
 import "./App.scss";
+import AddItemComponent from "./components/AddItemComponent/AddItem";
 
-function App() {
+import { TodoProvider, useTodoContext } from "./data-access/globalState";
+
+function AppContent() {
+  const { todoList } = useTodoContext();
+
   return (
     <div className="Todo-Container">
       <div className="Title">
@@ -9,9 +14,23 @@ function App() {
       </div>
 
       <div className="Input-Container">
-        
+        <AddItemComponent />
       </div>
+
+      {todoList.map((item, index) => (
+        <div key={index} className="Todo-Item">
+          <p>{item}</p>
+        </div>
+      ))}
     </div>
+  );
+}
+
+function App() {
+  return (
+    <TodoProvider>
+      <AppContent />
+    </TodoProvider>
   );
 }
 
