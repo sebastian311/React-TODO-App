@@ -13,8 +13,12 @@ export function TodoProvider({ children }) {
     setTodoList((prevList) => [...prevList, item]);
   }
 
+  function removeItemFromList(index) {
+    setTodoList((prevList) => prevList.filter((_, i) => i !== index));
+  }
+
   return (
-    <TodoContext.Provider value={{ todoList, addItemToList }}>
+    <TodoContext.Provider value={{ todoList, addItemToList, removeItemFromList }}>
       {children}
     </TodoContext.Provider>
   );

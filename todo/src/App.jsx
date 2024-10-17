@@ -4,7 +4,7 @@ import AddItemComponent from "./components/AddItemComponent/AddItem";
 import { TodoProvider, useTodoContext } from "./data-access/globalState";
 
 function AppContent() {
-  const { todoList } = useTodoContext();
+  const { todoList, removeItemFromList } = useTodoContext();
 
   return (
     <div className="Todo-Container">
@@ -20,6 +20,12 @@ function AppContent() {
       {todoList.map((item, index) => (
         <div key={index} className="Todo-Item">
           <p>{item}</p>
+          <button
+            onClick={() => removeItemFromList(index)}
+            className="Remove-Button"
+          >
+            X
+          </button>
         </div>
       ))}
     </div>

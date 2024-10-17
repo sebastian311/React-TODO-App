@@ -3,10 +3,13 @@
   flex-direction: column;
   text-align: center;
   align-items: center;
-  background-color: whitesmoke;
+  background-color: rgb(158, 157, 137);
+  background-image: linear-gradient(62deg, rgb(158, 157, 137) 0%, rgb(109, 104, 63) 100%);
 
-  height: 100vh;
-  max-height: 100vh;
+  min-height: 100vh;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
 
   div {
     width: 40%;
@@ -37,6 +40,7 @@
   }
 
   .Input-Container {
+    position: fixed;
     background-color: rgb(59, 130, 211) !important;
     color: white;
   }
