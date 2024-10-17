@@ -1,0 +1,37 @@
+.Todo-Container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  background-color: whitesmoke;
+
+  height: 100vh;
+
+  div {
+    width: 40%;
+    height: 8rem;
+    border-radius: 15% 0 15% 0;
+  }
+
+  div:nth-child(2n+1) {
+    background-color: rgb(241, 238, 190);
+  }
+
+  div:nth-child(2n+1):not(:first-child) {
+    background-color: rgba(241, 238, 190);
+    margin-top: -19px;
+    padding-top: 20px;
+  }
+
+  div:nth-child(2n) {
+    background-color: rgba(218, 217, 209);
+    margin-top: -19px;
+    padding-top: 20px;
+  }
+
+  .Title {
+    font-family: "Cedarville Cursive", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+}
