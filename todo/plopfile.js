@@ -14,7 +14,7 @@ module.exports = (plop) => {
     actions: [
       {
         type: 'add',
-        path: './src/components/{{pascalCase name}}Component/{{pascalCase name}}.jsx',
+        path: './src/components/{{pascalCase name}}Component/{{pascalCase name}}.tsx',
         templateFile: 'src/Plop-Templates/component.hbs'
       },
       {
@@ -32,18 +32,18 @@ module.exports = (plop) => {
       {
         type: 'input',
         name: 'name',
-        message: 'What is your service name?',
+        message: 'What is your service name? (x.service.tsx)',
       },
     ],
     actions: [
       {
         type: 'add',
-        path: './src/services/{{pascalCase name}}/{{pascalCase name}}.jsx',
-        // templateFile: 'src/Plop-Templates/component.hbs'
+        path: './src/data-access/services/{{pascalCase name}}/{{pascalCase name}}.tsx',
+        templateFile: 'src/Plop-Templates/service.hbs'
       },
       {
         type: 'add',
-        path: './src/services/{{pascalCase name}}/{{pascalCase name}}.scss',
+        path: './src/data-access/services/{{pascalCase name}}/{{pascalCase name}}.spec.tsx',
       },
     ],
   });
